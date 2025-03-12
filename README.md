@@ -45,16 +45,25 @@ computerGuesser()
   create int guess
   create string response
   create bool keepGoing gets True
+
   while keepGoing is True
     guess gets getMean(lowerBound, upperBound)
     print "<turn>) I guess <guess>
     print "Too (H)igh, too (L)ow, or (C)orrect?"
     store input to response
     if response equals h
-      upperBound gets upperBound divided by 2
+      upperBound gets guess
       guess gets getMean(lowerBound, upperBound)
     if response equals l
-      lower
+      lowerBound gets guess
+      guess gets getMean(lowerBound, upperBound)
+    if response equals c
+      keepGoing gets False
+
+getMean(lowerBound, upperBound)
+  create int mean
+  mean equals lowerBound plus upperBound divided by two
+  return mean 
       
   
 
