@@ -32,7 +32,25 @@ public class Guesser {
 		return response;
 	}
 	public void humanGuesser(){
-		System.out.println("humanGuesser");
+		int correct = (int) (Math.random() * 100) + 1;
+		int guess;
+		int turns = 0;
+		boolean keepGoing = true;
+			while (keepGoing){
+				turns++;
+				System.out.print("Please enter a number: ");
+				guess = input.nextInt();
+				if (guess == correct){
+					System.out.println("That's right! It took you " + turns + " turns.");
+					keepGoing = false;
+				}
+				if (guess < correct){
+					System.out.println("Too low...");
+				}
+				if (guess > correct){
+					System.out.println("Too high...");
+				}
+			}
 	}
 	public void computerGuesser(){
 		System.out.println("computerGuesser");
