@@ -4,7 +4,7 @@ Number guesser program writtenn in Java for CS-121
 ## algorithm 
 
 ```
-main()
+Guesser()
   bool keepGoing gets True
   while keepGoing is True
     string response gets menu()
